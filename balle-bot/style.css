@@ -40,8 +40,8 @@ main section:first-child div:first-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    height: 15.625rem;
+    gap: 2rem;
+    /* height: 15.625rem; */
 }
 
 h2 {
@@ -87,12 +87,11 @@ a:hover {
 
 /* --------------- */
 header .inner {
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
+    margin: 10px 0;
+    display: flex;
     align-items: center;
-    width: 80%;
+    justify-content: space-around;
+
 }
 
 header {
@@ -153,16 +152,11 @@ header button div {
 
 header nav {
     display: flex;
-    flex-direction: row;
 
     align-items: center;
-    justify-content: space-around;
-    max-width: 550px;
+    gap: 2rem;
 
-    font-style: normal;
-    font-weight: normal;
     font-size: 1.125rem;
-    line-height: 29px;
 }
 
 .separator {
@@ -222,7 +216,8 @@ footer img {
     }
 
     header .inner {
-        width: 90%;
+        padding: 0 20px;
+        justify-content: space-between;
     }
 
     main section:first-child {

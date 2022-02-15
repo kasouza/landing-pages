@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+        "header image"
+        "main   image";
+
+    grid-template-rows: 100px auto;
+}
+
+header {
+    width: 80%;
+    justify-self: center;
+
+    grid-area: header;
+    align-self: center;
+}
+
+.title {
+    margin-top: 120px;
+    max-width: 40%;
+    font-size: 62px;
+    font-weight: 400;
+    color: hsl(0, 6%, 24%);
+}
+
+.title span {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.hero-image {
+    height: 100vh;
+    grid-area: image;
+}
+
+main {
+    width: 80%;
+    justify-self: center;
+
+    grid-area: main;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+main > p {
+    color: hsl(0, 36%, 70%);
+    max-width: 70%;
+    line-height: 28px;
+}
+
+.email-wrapper {
+    position: relative;
+
+    width: 70%;
+    margin-top: 20px;
+    padding: 15px 22px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+
+    overflow: hidden;
+}
+
+.email-wrapper input {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.email-wrapper input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.email-wrapper input:focus {
+    outline: none;
+}
+
+.email-wrapper button {
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    width: 90px;
+    height: 100%;
+
+    background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%,hsl(0, 74%, 74%) 100%);
+    border-radius: 25px;
+
+    transform: translateY(-50%);
+}
+
+.email-wrapper button:hover {
+    background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%,hsl(0, 100%, 98%) 100%);
+}
+
+footer {
+    margin: 80px 0;
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        grid-template-areas:
+            "header"
+            "image"
+            "main";
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        text-align: center;
+    }
+    main .title {
+        margin-top: 80px;
+        max-width: unset;
+    }
+
+    main p {
+        max-width: 85%;
+    }
+
+    .email-wrapper {
+        width: 90%;
+        height: 60px;
+        border-radius: 30px;
+    }
+    
+    .email-wrapper button {
+        width: 75px;
+    }
+}

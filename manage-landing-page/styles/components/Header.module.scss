@@ -1,0 +1,48 @@
+@import "../globals.scss";
+
+.header {
+    position: relative;
+    
+    padding: 3rem 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div,
+    nav {
+        flex: 1 1 0;
+    }
+
+    .nav {
+        flex-grow: 2;
+        display: flex;
+        justify-content: space-evenly;
+
+        .link {
+            white-space: nowrap;
+
+            transition: 150ms;
+
+            &:hover,
+            &:focus {
+                color: $dark-grayish-blue;
+            }
+        }
+    }
+
+    .buttonContainer {
+        display: flex;
+        justify-content: flex-end;
+
+        white-space: nowrap;
+    }
+
+    .hamburgerContainer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding: 1.5em 10vw;
+    }
+}

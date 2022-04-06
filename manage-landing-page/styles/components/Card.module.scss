@@ -1,0 +1,19 @@
+@import "../globals.scss";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25em;
+    text-align: center;
+
+    width: 100%;
+
+    .imageContainer {
+        width: 25%;
+    }
+
+    .text {
+        color: $dark-grayish-blue;
+    }
+}

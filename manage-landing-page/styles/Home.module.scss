@@ -1,0 +1,335 @@
+@import "./globals";
+
+.container {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1.1vw;
+    color: $dark-blue;
+
+    background: url("../public/images/bg-tablet-pattern.svg") no-repeat;
+    background-position: top -8vw right -15vw;
+    background-size: 55vw auto;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 16px;
+        background: url("../public/images/bg-tablet-pattern.svg") no-repeat,
+            url("../public/images/bg-tablet-pattern.svg") no-repeat;
+        background-position: right calc(50% - 120px) top -8%, top 15% right -320px;
+
+        background-size: 640px, 520px;
+    }
+
+    @media screen and (max-width: 500px) {
+        // background-size: 520px, 85vw;
+    }
+
+    p,
+    h2 {
+        line-height: 1.75em;
+    }
+}
+
+.main {
+    overflow-x: hidden;
+
+    .intro {
+        padding: 5vw 10vw;
+
+        display: flex;
+        gap: 4vw;
+
+        div {
+            flex: 1 1 0;
+        }
+
+        .textContainer {
+            display: flex;
+            flex-direction: column;
+
+            gap: 2.5em;
+
+            h1 {
+                font-size: 4em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+                width: 75%;
+                font-weight: 400;
+                color: $dark-grayish-blue;
+            }
+        }
+
+        .statisticsContainer {
+            width: 100%;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            flex-direction: column-reverse;
+            padding: 0;
+            padding-bottom: 4em;
+
+            .textContainer {
+                font-size: 0.8em;
+                text-align: center;
+                align-items: center;
+                gap: 1em;
+
+                h1 {
+                    font-size: 3.4em;
+                    width: 96%;
+                    max-width: 570px;
+                }
+
+                h2 {
+                    padding-bottom: 1em;
+                    max-width: 530px;
+                }
+            }
+        }
+    }
+
+    .differencesTestimonialsContainer {
+        background: url("../public/images/bg-tablet-pattern.svg") no-repeat;
+
+        $background-size: 840px;
+        background-position: left calc(-1 * $background-size / 2) bottom 40%;
+
+        padding-bottom: 5vw;
+
+        .whatIsDifferent {
+            padding: 5vw 10vw;
+
+            display: flex;
+            gap: 4vw;
+
+            .textContainer,
+            .differences {
+                flex: 1 1 0;
+            }
+
+            .textContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 2em;
+
+                h2 {
+                    font-size: 2.5em;
+                    line-height: 1.1em;
+                }
+
+                p {
+                    width: 64%;
+                    color: $dark-grayish-blue;
+                }
+            }
+
+            .differences {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 4em;
+                list-style: none;
+
+                li {
+                    display: grid;
+                    grid-template-areas:
+                        "bullet title"
+                        ". text";
+                    column-gap: 2em;
+
+                    .bullet {
+                        grid-area: bullet;
+
+                        display: block;
+                        height: fit-content;
+                        padding: 0.75em 1.5em;
+
+                        background-color: $bright-red;
+                        color: white;
+
+                        border-radius: 2em;
+
+                        text-align: center;
+                        align-self: center;
+                    }
+
+                    .titleContainer {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+
+                        position: relative;
+                        height: 100%;
+
+                        h3 {
+                            grid-area: title;
+                            font-size: 1em;
+                        }
+                    }
+
+                    p {
+                        grid-area: text;
+                        width: 100%;
+                        color: $dark-grayish-blue;
+                    }
+
+                    @media screen and (max-width: 1000px) {
+                        grid-template-areas:
+                            "bullet title"
+                            "text text";
+
+                        grid-template-columns: 70px auto;
+                        column-gap: 1em;
+                        row-gap: 1em;
+
+                        .titleContainer {
+                            &::after {
+                                content: "";
+                                position: absolute;
+
+                                width: 100vw;
+                                height: 100%;
+
+                                top: 0;
+                                left: -3em;
+
+                                z-index: -1;
+
+                                background-color: $very-pale-red;
+                            }
+                        }
+                    }
+                }
+
+                @media screen and (max-width: 1000px) {
+                    padding: 0;
+                    padding-left: 2vw;
+                    width: 100%;
+                }
+            }
+
+            @media screen and (max-width: 1000px) {
+                flex-direction: column;
+                padding: 5vw 1vw;
+                gap: 3.5em;
+
+                .textContainer {
+                    text-align: center;
+
+                    h2 {
+                        margin: 0 auto;
+                        font-size: 2em;
+                        width: 80%;
+                    }
+
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .testimonials {
+            position: relative;
+            left: -5%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 4em;
+            width: 110%;
+            padding: 5vw 0;
+
+            h2 {
+                text-align: center;
+                font-size: 2.5em;
+            }
+
+            .buttonContainer {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            @media screen and (max-width: 1000px) {
+                left: 0;
+                width: 100%;
+                padding-top: 3em;
+                font-size: 0.8em;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            background: none;
+        }
+    }
+
+    .simplify {
+        position: relative;
+
+        padding: 8vw;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: $bright-red;
+
+        .backgroundImage {
+            position: absolute;
+            inset: 0;
+
+            background-position: left 0 top 10%, top 130% right -600px;
+
+            background-image: url("../public/images/bg-tablet-pattern.svg"),
+                url("../public/images/bg-tablet-pattern.svg");
+            background-repeat: no-repeat;
+
+            opacity: 0.08;
+        }
+
+        h2 {
+            color: white;
+            font-size: 2.5em;
+            width: 40%;
+        }
+
+        .buttonContainer {
+            a {
+                box-shadow: none;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            padding: 8em 1em;
+            flex-direction: column;
+            gap: 2em;
+
+            .backgroundImage {
+                background-size: 520px;
+                background-position: left -410px bottom -180px;
+                background-image: url("../public/images/bg-tablet-pattern.svg");
+                background-repeat: no-repeat;
+            }
+
+            h2 {
+                width: 100%;
+                text-align: center;
+                line-height: 1.2em;
+            }
+        }
+    }
+}
+
+.attribution {
+    padding: 10px;
+    background-color: $very-dark-blue;
+    color: white;
+    text-align: center;
+
+    a {
+        text-decoration: underline;
+    }
+}

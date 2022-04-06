@@ -1,0 +1,115 @@
+@import "../globals.scss";
+
+.footer {
+    font-size: 1em;
+    padding: 8vw;
+
+    display: grid;
+    grid-template-columns: 0.75fr 2fr 2fr;
+    grid-template-areas:
+        "logo links form"
+        "social links copyright";
+    gap: 4vw;
+    column-gap: 8vw;
+
+    background-color: $very-dark-blue;
+    color: white;
+
+    .logoContainer {
+        grid-area: logo;
+    }
+
+    .linksContainer {
+        display: flex;
+        justify-content: space-between;
+        grid-area: links;
+
+        ul {
+            list-style: none;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            a {
+                color: white;
+                opacity: 0.85;
+
+                transition: 150ms;
+
+                &:hover {
+                    color: $bright-red;
+                }
+            }
+        }
+    }
+
+    .form {
+        grid-area: form;
+    }
+
+    .copyright {
+        grid-area: copyright;
+        color: $dark-grayish-blue;
+        opacity: 0.5;
+
+        font-size: 0.75em;
+        justify-self: center;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        grid-area: social;
+
+        .icon {
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(63%) sepia(63%) saturate(5435%) hue-rotate(337deg)
+                    brightness(97%) contrast(95%);
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: unset;
+        grid-template-areas:
+            "form"
+            "links"
+            "social"
+            "logo"
+            "copyright";
+        
+        gap: 2em;
+        padding-bottom: 4em;
+        
+        .updateFormContainer {
+            width: 100%;
+        }
+
+        .linksContainer {
+            padding: 2em;
+        }
+
+        .socialIcons {
+            padding: 1em;
+
+            .icon {
+                display: block;
+                width: 32px;
+            }
+        }
+
+        .logoContainer {
+            padding: 2vw;
+            justify-self: center;
+            width: 50%;
+        }
+
+        .copyright {
+            padding: 2vw;
+        }
+    }
+}

@@ -71,7 +71,7 @@ const App: FC = () => {
     <div className={styles.App}>
       <header className={styles.header}>
         <div className={styles.innerHeader}>
-          <img src="/images/logo.svg" alt="Rock Paper Scissors" />
+          <img src="./images/logo.svg" alt="Rock Paper Scissors" />
 
           <Score score={score} />
         </div>

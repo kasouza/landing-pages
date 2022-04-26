@@ -17,6 +17,8 @@ const useStyles = createUseStyles({
     },
 
     button: {
+        position: 'absolute',
+        bottom: '2rem',
         letterSpacing: '0.1rem',
         fontWeight: 700,
         fontSize: '.75rem',

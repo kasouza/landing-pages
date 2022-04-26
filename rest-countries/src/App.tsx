@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro'
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Outlet } from 'react-router-dom'
 
 export default function App() {

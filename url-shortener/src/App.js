@@ -311,7 +311,7 @@ function App() {
 
       <div className={classes.attribution}>
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="https://www.github.com/kasouza">Your Name Here</a>.
+        Coded by <a href="https://www.github.com/kasouza">kasouza</a>.
       </div>
     </div>
   )

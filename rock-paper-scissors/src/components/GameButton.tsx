@@ -15,9 +15,9 @@ interface StylesProps {
 }
 
 const icons = {
-    [Shape.Rock]: '/images/icon-rock.svg',
-    [Shape.Paper]: '/images/icon-paper.svg',
-    [Shape.Scissors]: '/images/icon-scissors.svg',
+    [Shape.Rock]: './images/icon-rock.svg',
+    [Shape.Paper]: './images/icon-paper.svg',
+    [Shape.Scissors]: './images/icon-scissors.svg',
     [Shape.None]: '',
 }
 
